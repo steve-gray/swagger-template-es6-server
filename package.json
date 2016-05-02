@@ -1,0 +1,35 @@
+{
+  "name": "swagger-template-es6-server",
+  "version": "0.0.1",
+  "description": "ES6 Template-set for swagger-codegen that generates much of the code required for a server-side solution.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve-gray/swagger-template-es6-server.git"
+  },
+  "keywords": [
+    "swagger",
+    "template",
+    "es6",
+    "codegen",
+    "swagger-codegen"
+  ],
+  "author": "Steve Gry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steve-gray/swagger-template-es6-server/issues"
+  },
+  "homepage": "https://github.com/steve-gray/swagger-template-es6-server#readme",
+  "dependencies": {
+    "defaults-deep": "^0.2.3"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
