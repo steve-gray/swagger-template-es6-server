@@ -3,6 +3,10 @@
 [![Dev Dependencies](https://david-dm.org/steve-gray/gulp-swagger-codegen/dev-status.svg)](https://david-dm.org/steve-gray/swagger-template-es6-server#info=devDependencies)
 [![npm version](https://badge.fury.io/js/swagger-template-es6-server.svg)](https://badge.fury.io/js/swagger-template-es6-server)
 
+
+![Stats]( https://nodei.co/npm/swagger-template-es6-server.png?downloads=true&downloadRank=true&stars=true)
+![Downloads](https://nodei.co/npm-dl/swagger-template-es6-server.png?height=2)
+
 Templates for use with swagger-codegen/gulp-swagger-codegen. Generates ES6 
 server-side definitions and controller-stubs intended for use with swagger-tools
 or similar packages.
