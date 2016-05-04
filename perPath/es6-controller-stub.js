@@ -34,8 +34,13 @@ function resolveImplementation(impl, req) {
   }
 
   // If we've got a resolver, then use that.
+  // LEGACY - This was the prebeta connect-ioc convention.
   if (req && req.resolver && typeof req.resolver === 'function') {
     return req.resolver(impl);
+  }
+  // Support for connect-ioc
+  if (req.ioc && req.ioc.build && typeof req.ioc.build === 'function') {
+    return req.ioc.build(impl);
   }
 
   // Call generator function, if required
