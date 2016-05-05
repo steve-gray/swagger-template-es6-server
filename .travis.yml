@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '6.0'
+- '5.5'
+- '5.0'
+- '4.0'
+script: node index
+
+deploy:
+  provider: npm
+  api_key: "$NPM_AUTH_KEY"
+  email: eventsauce@cobaltsoftware.net
+  skip_cleanup: true
+  on:
+    tags: true
+    node_js: 6.0
