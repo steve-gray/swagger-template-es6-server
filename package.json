@@ -1,6 +1,6 @@
 {
   "name": "swagger-template-es6-server",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "ES6 Template-set for swagger-codegen that generates much of the code required for a server-side solution.",
   "main": "index.js",
   "scripts": {
