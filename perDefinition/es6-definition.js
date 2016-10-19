@@ -67,6 +67,21 @@ class {{definitionName}} {
     }{{else}}{{/arrayContains}}
     {{/compare}}
     {{/each}}
+    {{#if additionalProperties}}
+    // Any additionalProperties are direct mapped.
+    this.additionalProperties = {};
+    for (const key in input) {
+    {{#each properties}}
+      // Skip known property {{@key}}
+      if (key === "{{@key}}") {
+        continue;
+      }      
+
+    {{/each}}
+      // Not known, so must be an additional property
+      this.additionalProperties[key] = input[key];
+    } 
+    {{/if}}
     {{else}}
     // Direct value storage
     this._value = input;
@@ -119,6 +134,13 @@ class {{definitionName}} {
   toJSON() {
     {{#compare type "===" "object"}}
     const result = {};
+    {{#if additionalProperties}}
+    // Import any non-canonical properties first
+    for (const key in this.additionalProperties) {
+      result[key] = this.additionalProperties[key];
+    } 
+
+    {{/if}}
     {{#each properties}}
     result.{{@key}} = this._{{@key}};
     {{/each}}
