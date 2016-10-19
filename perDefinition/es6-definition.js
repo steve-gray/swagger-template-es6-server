@@ -78,8 +78,34 @@ class {{definitionName}} {
       }      
 
     {{/each}}
+      {{#with additionalProperties}}
+      const innerMapper =
+        {{#compare type "===" "array"}}
+          // Can't validate array members yet this way.
+          (x) => x;
+        {{else}}          
+          {{#withDef $ref ../../definitionMap}}
+          // Typed mapping
+          x => new (require('./{{#lowercase}}{{definitionName}}{{/lowercase}}'))(x);
+          {{else}}
+          // Native type/untyped.
+          x => x;
+          {{/withDef}}
+        {{/compare}}
+
+      // Calculate the item we add to the map
+      const result = 
+        {{#compare type "===" "array"}}
+        // Array case - Map each member of source array
+        input[key].map(x => innerMapper(x));
+        {{else}}
+        // Non-Array case - Direct usage of inner mapper
+        innerMapper(input[key]);
+        {{/compare}}
+      {{/with}}
+
       // Not known, so must be an additional property
-      this.additionalProperties[key] = input[key];
+      this.additionalProperties[key] = result;
     } 
     {{/if}}
     {{else}}
