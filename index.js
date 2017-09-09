@@ -8,7 +8,7 @@ module.exports = (templateSetOptions) => {
     definitions: './definitions',
     controllers: './controllers',
     defsRelativeToController: '../definitions',
-    operations: ['get', 'put', 'post', 'delete'],
+    operations: ['get', 'patch', 'put', 'post', 'delete'],
     controllerSplitBy: 'x-swagger-router-controller',
     implementationPath: null,
   });

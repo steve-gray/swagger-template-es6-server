@@ -45,7 +45,7 @@ assumed in lieu of configuration to the contrary:
       implementationPath: '../../controllers',
       
       // HTTP verbs to generate actions for.
-      operations: ['get', 'put', 'post', 'delete'],
+      operations: ['get', 'patch', 'put', 'post', 'delete'],
 
       // When dividing up the operations/paths, this custom attribute
       // is used to determine the set of 'controllers' we generate.
