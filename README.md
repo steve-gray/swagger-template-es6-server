@@ -1,6 +1,6 @@
 # swagger-template-es6-server
-[![Prod Dependencies](https://david-dm.org/steve-gray/gulp-swagger-codegen/status.svg)](https://david-dm.org/steve-gray/swagger-template-es6-server)
-[![Dev Dependencies](https://david-dm.org/steve-gray/gulp-swagger-codegen/dev-status.svg)](https://david-dm.org/steve-gray/swagger-template-es6-server#info=devDependencies)
+[![Prod Dependencies](https://david-dm.org/fastbean-au/gulp-swagger-codegen/status.svg)](https://david-dm.org/fastbean-au/swagger-template-es6-server)
+[![Dev Dependencies](https://david-dm.org/fastbean-au/gulp-swagger-codegen/dev-status.svg)](https://david-dm.org/fastbean-au/swagger-template-es6-server#info=devDependencies)
 [![npm version](https://badge.fury.io/js/swagger-template-es6-server.svg)](https://badge.fury.io/js/swagger-template-es6-server)
 
 
@@ -10,6 +10,13 @@
 Templates for use with swagger-codegen/gulp-swagger-codegen. Generates ES6 
 server-side definitions and controller-stubs intended for use with swagger-tools
 or similar packages.
+
+## Status
+This repository/package has been forked from [steve-gray/swagger-template-es6-server](https://github.com/steve-gray/swagger-template-es6-server)
+as it was not being maintained. The automated build pipelines have not yet been put in place, and
+dependencies are sorely out of date. At some point this may be rectified...until then, use cautiously.
+
+To use: follow the [instructions found here.](https://coderwall.com/p/q_gh-w/fork-and-patch-npm-moduels-hosted-on-github)
 
 ## Installation & Usage
 To use with gulp-swagger-codegen, install with:
