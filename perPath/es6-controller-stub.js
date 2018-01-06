@@ -176,11 +176,12 @@ function {{operationId}}(req, res) {
   // (variable-list) - All extracted parameters in declaration order.
   // responder - The responder helper object.
   // req - The raw request object
-  // res - The raw response object
+  // res - The raw response object (not included as it is included in the responder object)
   return impl.{{operationId}}(
 {{#each parameters}}    {{name}},
 {{/each}}
-    responder
+    responder,
+    req
   );
 }
 {{/each}}
