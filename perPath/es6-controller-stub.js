@@ -99,6 +99,7 @@ function {{operationId}}(req, res) {
   // on operations in order to have a mapping here. Enforce typing of the
   // responses with swaggerValidator from swagger-tools.
   const responder = {
+    req,
     res,
   {{#each responses}}
     {{#property . "x-gulp-swagger-codegen-outcome" "resultName"}}
